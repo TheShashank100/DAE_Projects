@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML + CSS Requirements Demo</title>
+
+    <!-- External font (Google Fonts) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- External stylesheet (ALL CSS in styles.css) -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <header id="top" class="site-header" data-section="header">
+      <h1 class="title-shadow">Requirements Checklist Site</h1>
+
+      <nav class="nav-links" aria-label="Main navigation">
+        <a class="btn-link" href="about.html" title="Go to the About page">About (Local Page)</a>
+        <a
+          class="btn-link"
+          href="https://developer.mozilla.org/en-US/docs/Web/HTML"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="MDN HTML docs (opens new tab)"
+        >
+          Learn HTML (External)
+        </a>
+        <a class="btn-link" href="#media" title="Jump to media section">Media</a>
+      </nav>
+
+      <p class="small">
+        Quote:
+        <cite title="Example citation">“Simplicity is the soul of efficiency.”</cite>
+      </p>
+    </header>
+
+    <main class="page">
+      <section id="structure" class="card" data-topic="semantic">
+        <h2>1) Semantic HTML + Specialized Tags</h2>
+
+        <p>
+          Semantic elements used: <code>&lt;header&gt;</code>,
+          <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>,
+          <code>&lt;section&gt;</code>, <code>&lt;footer&gt;</code>.
+        </p>
+
+        <p>
+          Example code:
+          <code>console.log("Hello, HTML + CSS!");</code>
+        </p>
+
+        <p>
+          Source example: <cite title="Example cite tag">MDN Web Docs</cite>
+        </p>
+      </section>
+
+      <section id="table-area" class="card" data-topic="tables">
+        <h2>2) Table with Rowspan + Colspan</h2>
+
+        <table class="pretty-table" aria-label="Weekly Study Table">
+          <tr>
+            <td colspan="3"><strong>Weekly Plan (colspan=3)</strong></td>
+          </tr>
+          <tr>
+            <td><strong>Day</strong></td>
+            <td><strong>Task</strong></td>
+            <td><strong>Time</strong></td>
+          </tr>
+          <tr>
+            <td rowspan="2"><strong>Monday (rowspan=2)</strong></td>
+            <td>HTML Practice</td>
+            <td>45 min</td>
+          </tr>
+          <tr>
+            <td>Homework</td>
+            <td>30 min</td>
+          </tr>
+          <tr>
+            <td><strong>Tuesday</strong></td>
+            <td>Project Updates</td>
+            <td>40 min</td>
+          </tr>
+        </table>
+      </section>
+
+      <section id="form-area" class="card" data-topic="forms">
+        <h2>3) Form</h2>
+
+        <form
+          action="#top"
+          method="get"
+          id="contactForm"
+          class="form-box"
+          data-form="feedback"
+        >
+          <h3 for="name">Your Name (text input)</h3>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Type your name..."
+            required
+          />
+
+          <label for="message">Message (textarea)</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="4"
+            placeholder="Write something..."
+          ></textarea>
+
+          <label class="checkbox-line">
+            <input
+              type="checkbox"
+              id="subscribe"
+              name="subscribe"
+              value="subscribe"
+            />
+            Subscribe me to updates (checkbox)
+          </label>
+
+          <!-- attribute-name-as-value requirement example -->
+          <button type="submit" id="submitBtn" name="submitBtn" value="submitBtn">
+            Submit
+          </button>
+        </form>
+      </section>
+
+      <section id="media" class="card" data-topic="media">
+        <h2>4) Multimedia</h2>
+
+        <p class="small">
+          Video and audio are embedded from online sources.
+        </p>
+
+        <!-- VIDEO (YouTube embed counts as video) -->
+        <iframe
+          width="520"
+          height="290"
+          src="https://www.youtube.com/embed/dD2EISBDjWM"
+          title="HTML Tutorial Video"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+
+        <br /><br />
+
+        <!-- AUDIO (online MP3, no download needed) -->
+        <audio controls>
+          <source
+            src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
+            type="audio/mpeg"
+          />
+          Your browser does not support the audio element.
+        </audio>
+      </section>
+    </main>
+
+    <footer class="site-footer" data-section="footer">
+      <p class="small">
+        Back to the top:
+        <a class="footer-link" href="#top" title="Back to top">Top</a>
+      </p>
+    </footer>
+  </body>
+</html>
